@@ -46,10 +46,12 @@ contract CryptoDevToken is ERC20, Ownable {
         require(amount > 0, "Nothing to withdraw, contract balance empty");
         address _owner = owner();
         (bool sent, ) = _owner.call{value: amount}("");
-        
-
-
+        require(sent, "Failed to send Ether");
     }
+    receive() external payable {}
+
+      // Fallback function is called when msg.data is not empty
+      fallback() external payable {}
 }
 
 
