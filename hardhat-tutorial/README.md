@@ -11,3 +11,4 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+Crypto Devs Token Contract Address: 0xC208d7A6B95eB101701f06238bee8aeC4e352674
